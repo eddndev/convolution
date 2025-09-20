@@ -2,10 +2,10 @@
   <img src="./assets/logo.svg" alt="Logo del Proyecto" width="200">
   <br/>
   <h1>
-    <b>Calculadora de la Transformada de Fourier</b>
+    <b>Calculadora de Convolución</b>
   </h1>
   <p>
-    Una herramienta web para definir señales en el dominio del tiempo, calcular su Transformada de Fourier mediante integración numérica y visualizar su espectro de magnitud y fase en el dominio de la frecuencia.
+    Una herramienta web interactiva para calcular y visualizar la convolución de dos señales. Defina las funciones, observe el desplazamiento y analice la gráfica resultante en tiempo real.
   </p>
 </div>
 
@@ -20,20 +20,22 @@
 
 ## 📜 Descripción del Proyecto
 
-Este proyecto nace como una herramienta educativa y de análisis para la materia de **Procesamiento Digital de Señales**. Su propósito es permitir a los usuarios definir una señal o función en el dominio del tiempo, `x(t)`, para posteriormente analizar su composición en el dominio de la frecuencia.
+Este proyecto nace como una herramienta educativa y de análisis para la materia de **Procesamiento Digital de Señales**. Su propósito es desmitificar la operación de **convolución** al permitir a los usuarios visualizar cómo la forma de una señal modifica la forma de otra.
 
-La aplicación calcula la **Transformada de Fourier** de la señal de entrada utilizando la **Regla de Simpson 1/3** para una integración numérica de alta precisión. El resultado es una visualización interactiva que muestra tanto la señal original en el tiempo como su correspondiente **espectro de magnitud y fase** en el dominio de la frecuencia, permitiendo un análisis detallado de los componentes frecuenciales de la señal.
+La aplicación permite definir dos señales, una fija y una que se desplazará. Calcula la integral de convolución y muestra de forma simultánea tres gráficas clave: la señal fija, la señal en desplazamiento y la función resultante de la convolución, facilitando la comprensión intuitiva de este concepto fundamental en el procesamiento de señales.
 
 ---
 
 ## ✨ Características Principales
 
-* **Definición de Señales:** Construye la señal de entrada `x(t)` añadiendo, modificando y eliminando segmentos de funciones.
-* **Previsualización en LaTeX:** Observa en tiempo real la representación matemática de la señal que estás creando.
-* **Cálculo Numérico Preciso:** Implementación de la Regla de Simpson para resolver la integral de la Transformada de Fourier.
-* **Análisis de Espectro:** Visualiza las gráficas de magnitud `|X(ω)|` y fase `∠X(ω)` de la señal en el dominio de la frecuencia.
-* **Visualización Dual:** Compara de forma interactiva la señal original en el dominio del tiempo con su representación en el dominio de la frecuencia.
-* **Procedimiento Detallado:** Visualiza la fórmula de la Transformada de Fourier y los pasos de integración utilizados para el cálculo.
+* **Definición Flexible de Señales:** Permite definir las dos señales a convolucionar, ya sea seleccionándolas de un menú de funciones predefinidas o introduciendo manualmente sus ecuaciones, periodos e intervalos.
+* **Cálculo de la Ecuación:** El programa determina y muestra la ecuación matemática resultante de la operación de convolución.
+* **Visualización en Tiempo Real:** Muestra tres gráficas simultáneas para un análisis completo:
+    1.  **Gráfica de la señal fija.**
+    2.  **Gráfica de la señal que se desplazará.**
+    3.  **Gráfica de la convolución resultante.**
+* **Claridad en las Gráficas:** Todas las visualizaciones se presentan con sus respectivos títulos y nombres en los ejes para una interpretación clara.
+* **Previsualización en LaTeX:** Observa en tiempo real la representación matemática de las funciones que estás introduciendo.
 
 ---
 
@@ -43,7 +45,7 @@ Este proyecto fue refactorizado de un monolito a una arquitectura moderna utiliz
 
 * **Vite:** Como servidor de desarrollo y empaquetador, ofreciendo Hot Module Replacement (HMR).
 * **Tailwind CSS v4:** Para un estilizado rápido y mantenible a través de su motor de plugins en Vite.
-* **Plotly.js:** Para la renderización de las gráficas interactivas del dominio del tiempo y la frecuencia.
+* **Plotly.js:** Para la renderización de las gráficas interactivas.
 * **Math.js:** Para el parseo de expresiones matemáticas y la generación de LaTeX.
 * **MathJax:** Para el renderizado de alta calidad de las fórmulas LaTeX en el DOM.
 
